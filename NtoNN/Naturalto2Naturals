@@ -1,0 +1,84 @@
+00	01	02	03	04
+10	11	12	13	14
+20	21	22	23	24
+30	31	32	33	34
+40	41	42	43	44
+
+->
+0	(0, 0)
+1	(0, 1)
+2	(1, 0)
+3	(0, 2)
+4	(1, 1)
+5	(2, 0)
+6	(0, 3)
+7	(1, 2)
+8	(2, 1)
+9	(3, 0)
+10	(0, 4)
+11	(1, 3)
+12	(2, 2)
+13	(3, 1)
+14	(4, 0)
+
+Idea
+0		0
+[1, 2]		1
+[3, 5]		2
+[6, 9]		3
+[10, 14]	4
+
+
+0 0
+2 1
+5 2
+9 3
+
+o
+
+0 0
+1 1
+3 2
+6 3
+
+n ( n -1 ) / 2
+	0 0
+	1 0
+	3 1
+	6 2
+
+n ( n -1 ) / 2
+	0 0
+	1 1
+	3 2
+	6 3
+
+Aquest semble que fa alguna cosa que s'aproxima molt millor al que vull
+
+n ( n + 1 ) / 2 = c
+Volem aillar la n
+n² + n - 2c = 0
+n = frac {-1 ± √ ( 1 + 4c ) } {2}
+
+Mirem quin d'aquest dos és
+Hem descobert que és el possitiu
+
+n = ⌈ (-1 + √ ( 1 + 4c )) / 2 ⌉
+
+Algo raro esta passant, tinc errors importants
+
+n = ⌈ (-1 + √ ( 1 + 8c )) / 2 ⌉
+
+Un petit error sense gaire importancia
+
+Llavors la idea
+entrada es x
+f = ⌈ (-1 + √ ( 1 + 8c )) / 2 ⌉
+s = f ( f + 1 ) /2
+return x-s, f - x + s
+
+Ultima correccio
+entrada es x
+f = ⌊ (-1 + √ ( 1 + 8c )) / 2 ⌋
+s = f ( f + 1 ) /2
+return x-s, f - x + s
