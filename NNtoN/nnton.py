@@ -1,7 +1,7 @@
 import math
 # Reciclant codi anterior :◁)
 def funciona ():
-	print ("Funciona el nnton i el ton, son el mateix pero amb la entrada diferent")
+	print ("Funciona el nnton i el ton, son el mateix pero amb la entrada different")
 def ntonn ( x ):
 	f = math.floor ( ( -1 + math.sqrt ( 1 + 8 * x ) ) / 2 )
 	s = int ( f * ( f + 1 ) / 2 )
